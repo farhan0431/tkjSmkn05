@@ -3,18 +3,23 @@
     <div class="jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">TKJ <sup>20</sup></h1>
-        <p class="lead">SMKN 5 MAKASSAR</p>
+        <h2>SMKN 5 MAKASSAR</h2>
+        <p class="lead">
+          Semua cerita tentang kita ada disini
+        </p>
       </div>
     </div>
+    <comp-nama />
     <comp-foto />
   </div>
 </template>
 <script>
 import compFoto from '@/components/home/comp-foto'
-import CompFoto from '~/components/home/comp-foto.vue'
+import compNamaVue from '~/components/home/comp-nama.vue'
 export default {
   components: {
-    'comp-foto' : compFoto
+    'comp-foto' : compFoto,
+    'comp-nama' : compNamaVue
   }
 }
 </script>

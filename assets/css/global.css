@@ -1,5 +1,11 @@
 body {
-    background-color: #130f40;
+    background-color: #000;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
 }
 
 
@@ -8,24 +14,48 @@ body {
 
 
 #slide-one {
-    z-index: 0;
+    z-index: -1;
     top: 0px;
     position: absolute;
     width: 380px;
     right: 100px;
+    transition: .5s all ease-in-out;
 }
 
 #slide-one img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-    opacity: .5;
+    opacity: 1;
     position: relative;
-    transition: .5s ease-in-out;
+    transition: .5s all ease-in-out;
+    filter: brightness(40%);
 }
 
-#slide-one img:hover {
-    cursor: pointer;
-    opacity: 1;
-    transform: scale(1.5);
-}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    #slide-one {
+        height: 500px !important;
+        width: 200px;
+        transform: rotate(50deg);
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+        top: auto;
+        bottom: -400px;
+        left: -300px;
+        max-width: 100%;
+        border: 1px solid aliceblue;
+    }
+
+    #slide-one img {
+        display: grid;
+        width: inherit;
+        float: left;
+    }
+
+  }
