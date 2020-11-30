@@ -1,0 +1,31 @@
+body {
+    background-color: #130f40;
+}
+
+
+
+/* comp foto */
+
+
+#slide-one {
+    z-index: 0;
+    top: 0px;
+    position: absolute;
+    width: 380px;
+    right: 100px;
+}
+
+#slide-one img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: .5;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+#slide-one img:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.5);
+}
